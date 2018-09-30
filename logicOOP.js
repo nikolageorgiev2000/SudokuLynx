@@ -147,11 +147,11 @@ document.addEventListener("DOMContentLoaded",
 
         };
 
-
         function undoAction(Grid){
             if(Grid.stack.length>0){
                 var undoData = stack.pop();
                 Grid.inputs[undoData[0]].value = undoData[1];
+                Grid.inputs[undoData[0]].oldVal = Grid.inputs[undoData[0]].value;
             }
         }
 
@@ -213,7 +213,7 @@ document.addEventListener("DOMContentLoaded",
             test.inputs[x].onchange = function() {
                 temp = [this.coord, this.oldVal];
                 test.stack.push(temp);
-                this.oldVal = this.value.toString();
+                this.oldVal = this.value;
                 if (document.getElementById("autoCheck").checked == true) {
                     checkSudoku(test);
                 };
