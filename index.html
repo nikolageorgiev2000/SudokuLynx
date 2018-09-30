@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en" content="width=device-width, initial-scale=<input class=1">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <script src="logicOOP.js"></script>
+
+        <title>
+            Sudoku Lynx
+        </title>
+    </head>
+
+    <body>
+        <!-- NAVBAR -->
+        <header>
+            <img src="LOGO.png" alt="SudokuLynx">
+            <div class="nav">
+                <div class="navbar">
+                    <a href="index.html">Home</a>
+                    <a href="challenge.html">Daily Puzzle</a>
+                    <a href="subscribe.html">Subscribe!</a>       
+                </div>
+            </div>
+        </header>
+
+        <!-- CONTENT -->
+        <div class="board">
+                <table class="grid" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td class="puzTitle" colspan="9">
+                            <span id="title">Sudoku #HC1 Easy</span>
+                        </td>
+                    </tr>
+                  <tr id="firstRow">
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+
+                    <td id="settings" rowspan="9">
+                        <div>
+                            <button class="settingButton" id="share">SHARE</button>
+                            <a href="javascript:window.print()"><button class="settingButton" id="print">PRINT</button></a>
+                        </div>
+
+                        <div class="difficultyList">
+                            <input name="difficulty" type="radio" value="0">Easy</input>
+                            <br>
+                            <input name="difficulty" type="radio" value="1">Medium</input>
+                            <br>
+                            <input name="difficulty" type="radio" value="2">Hard</input>
+                            <br>
+                            <input name="difficulty" type="radio" value="3">Master</input>
+                        </div>
+
+                        <div>
+                            <input class="subInput" placeholder="Code (e.g.HC1)" id="code" type="text">
+                            <button class="settingButton" id="generate">Generate!</button>
+                        </div>
+                        
+                        <div>
+                            <button class="settingButton" id="undo">UNDO</button>
+                            <button class="settingButton" id="hint">HINT</button>
+                        </div>
+
+                        <div>
+                            <input id="autoCheck" type="checkbox">Autocorrect
+                            </input>
+                            <button class="settingButton" id="checkButton">CHECK SUDOKU</button>
+                        </div>
+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                  </tr>
+                  <tr id="thirdRow">
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                  </tr>
+                  <tr>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                  </tr>
+                  <tr>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                  </tr>
+                  <tr id="sixthRow">
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                  </tr>
+                  <tr>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                  </tr>
+                  <tr>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                  </tr>
+                  <tr>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                    <td><input class="puzNum" type="number" placeholder=""></td>
+                  </tr>
+
+                </table>
+
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <p>Logo made with LogoMakr</p>
+        </div>
+    </body>
+</html>

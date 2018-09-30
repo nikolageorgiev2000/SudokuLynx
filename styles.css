@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700');
+html {
+    /*CITE: https://uigradients.com/#Margo*/
+    font-family: 'Open Sans', sans-serif;
+    background: #FFEFBA;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #FFFFFF, #FFEFBA);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #FFFFFF, #FFEFBA);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.content {
+    text-align: center;
+    margin: auto;
+    margin-top: 40px;
+    vertical-align: middle;
+    width:54vw;
+}
+
+h2 {
+    font-size: 2em;
+    width: 40vw;
+}
+
+h4 {
+    width: 700px;
+}
+
+.subInput {
+    font-weight: bold;
+    width: 20vw;
+    padding: 1em;
+    margin: 4px 4px;
+    border-radius: 5px;
+}
+
+#sub {
+    background-color: #FFC300;
+    border: black solid 2px;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1em;
+    margin: 10px;
+    border-radius: 25px;
+}
+
+
+/* Navbar container */
+
+img{
+    background-color: #444;
+    padding:1vw;
+    margin:auto;
+    width: 20vw;
+    height:auto;
+    float:left;
+    border-radius: 20px;
+}
+
+.nav{
+    background-color: #444;
+}
+
+.navbar {
+    margin: auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+/* Links inside the navbar */
+
+.page{
+    width: 1000vw;
+    /*margin-right: 100px;*/
+}
+
+.navbar a {
+    /*width: 25%;*/
+    /*margin-left:0px;*/
+    float: left;
+    font-size: 1.2em;
+    color: white;
+    text-align: center;
+    padding: 1.5vw;
+}
+
+.navbar a:link {
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+    color: #000;
+    background-color: #FFEFBA;
+}
+
+.footer{
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #333;
+    text-align: center;
+}
+
+.board{
+    margin: auto;
+    margin-top: 2vw;
+    width: 50vw;
+    margin-left: 
+}
+
+.grid{
+    display: inline-block;
+    table-layout: auto;
+    /*width:100vw;*/
+    /*border: 2px solid black;*/
+    border-collapse: collapse;
+    /*display: inline;*/
+}
+
+
+.puzNum{
+    background-color: white;
+    width: 3vw;
+    height: 3vw;
+    font-size: 1.75em;
+    text-align: center;
+}
+
+.puzNum::-webkit-inner-spin-button, 
+.puzNum::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+.puzTitle{
+    text-align: right;
+    font-weight: 600;
+    font-size: 3vw;
+    padding: 1vw;    
+}
+
+
+#settings{
+    width:13vw;
+    border-left: solid 3px black;
+    padding: 3px;
+}
+
+#autoCheck{
+    font-size: 1em;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+    margin-left: 1vw;
+}
+
+.settingButton{
+    text-align: center;
+    width:48%;
+    background-color: #FFC300;
+    border: black solid 2px;
+    color: black;
+    padding: .5vw;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2vw;
+    margin: 0px;
+    border-radius: 0px;
+}
+
+.settingButton:active, #sub:active, #generate:active{
+    background-color: #FFEFBA;
+}
+
+#checkButton{
+    font-size: 15em;
+    font-weight: 600;
+    text-align: center;
+    width:100%;
+    height: 7vw;
+    background-color: #FF5733;
+    border: black solid 2px;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1em;
+    margin: 0px;
+    border-radius: 0px;
+}
+
+#checkButton:active{
+    background-color:#FFC300; 
+}
+
+*:focus{
+    outline:none;
+}
+
+
+td:nth-child(3n) {
+  border-right:2px black solid;
+}
+#thirdRow, #sixthRow{
+    border-bottom: 2px black solid;
+}
+/*
+tr:nth-child(2n+1) {
+  border-top:2px black solid;
+}
+tr:nth-child(3n) td {
+  border-bottom:2px black solid;
+}*/
+
+.difficultyList{
+    padding-left: 1vw;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+
+#code{
+    width:10.5vw;
+    margin-bottom: 1vw;
+    height:50%;
+}
+
+#generate{
+    width:100%;
+    margin-bottom: 1vw;
+}
+
+@media print {
+    .footer,header,#settings {display:none;}
+}
+
+@media only screen and (min-width: 900px) {
+    .footer{
+        position: fixed;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+/*        .footer{
+            position: relative;
+        }*/
+
+        td span{
+            font-size: 1em !important;
+        }
+
+        .board{
+            margin:0px;
+        }
+        .puzTitle span{
+            font-size: 1em;
+        }
+        .navbar a {
+            font-size: 0.9em;
+        }
+        h2{
+            font-size: 1.3em;
+        }
+        h4{
+            font-size: 1em;
+        }
+        .subInput{
+            width:50vw;
+        }
+        .puzNum{
+            font-size: 1em;
+        }
+}

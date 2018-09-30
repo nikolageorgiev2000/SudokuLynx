@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en" content="width=device-width, initial-scale=1">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <script src="subscribe.js"></script>
+
+        <title>
+            Sudoku Lynx
+        </title>
+    </head>
+
+    <body>
+        <!-- NAVBAR -->
+        <header>
+            <img src="LOGO.png" alt="SudokuLynx">
+            <div class="nav">
+                <div class="navbar">
+                    <a href="index.html">Home</a>
+                    <a href="challenge.html">Daily Puzzle</a>
+                    <a href="subscribe.html">Subscribe!</a>       
+                </div>
+            </div>
+        </header>
+
+        <!-- CONTENT -->
+        <h2 id="heading" class="content"> Subscribe to get daily sudokus straight to your email inbox!</h2>
+        <h4 class="content">The difficulties are as follows: Easy(0), Medium(1), Hard(2), Master(3). <br /> If you want to change your difficulty, subscribe again and the sudokus will be adjusted for you.</h4>
+        <div class="content">
+            <div>
+                <input id="name" type="text" class="subInput" placeholder="Enter Your Name">
+                <input input type="email" id="email" type="text" class="subInput" placeholder="Enter Your Email">
+            </div>
+            <div>
+                <input id="diff" type="text" class="subInput" placeholder="Difficulty 0-3">
+                <input id="sum" type="text" class="subInput">
+            </div>
+            <button id="sub" class="square">subscribe</button>
+            <h3 id="thanks" type="text"></h3>
+        </div>
+
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <p>Logo made with LogoMakr</p>
+        </div>
+    </body>
+</html>
