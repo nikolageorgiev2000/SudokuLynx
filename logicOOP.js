@@ -163,7 +163,7 @@ document.addEventListener("DOMContentLoaded",
                     cellCoord = Math.trunc(Math.random()*81);
                 }
                 document.querySelector("#hint").disabled=true;
-                Grid.inputs[cellCoord].placeholder = 5;
+                Grid.inputs[cellCoord].placeholder = Grid.loadedSudoku[cellCoord];
                 Grid.inputs[cellCoord].disabled = true;
                 Grid.inputs[cellCoord].style.backgroundColor="#AAFF00";
                 setTimeout(function(){ Grid.inputs[cellCoord].style.backgroundColor="white"; }, 1500);
