@@ -198,9 +198,9 @@ document.addEventListener("DOMContentLoaded",
                     Grid.inputs[i].style.backgroundColor = "#FF5733";
                     correct = false;
                 }
-                if(correct){
-                    alert("All correct! Share with your friends by pressing Share.")
-                }
+            }
+            if(correct){
+                alert("All correct! Share with your friends by pressing Share.")
             }
         };
 
