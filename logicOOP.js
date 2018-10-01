@@ -25,6 +25,8 @@ document.addEventListener("DOMContentLoaded",
 
 
             this.generate = function() {
+                document.querySelector("#hint").disabled=false;
+                document.querySelector("#hint").style.backgroundColor="#FFC300";
                 var loadedSudoku = this.loadedSudoku;
                 var inputs = this.inputs;
                 pi = 3.1415926535897932384626433832795028841971693993751; //Decimal
@@ -32,7 +34,7 @@ document.addEventListener("DOMContentLoaded",
                 codeNoDiff = this.codeNoDiff;
                 difficulty = this.difficulty;
                 stack = this.stack;
-                hintUsed = this.hintUsed;
+                // hintUsed = this.hintUsed;
 
                 //Regular expression to check code is of correct type (LetterLetterDigit)
                 var letter1 = '([a-z])';
@@ -140,7 +142,7 @@ document.addEventListener("DOMContentLoaded",
                 this.codeNoDiff = codeNoDiff;
                 this.difficulty = difficulty;
                 this.stack = stack;
-                this.hintUsed = hintUsed;
+                // this.hintUsed = hintUsed;
 
 
             };
@@ -158,6 +160,7 @@ document.addEventListener("DOMContentLoaded",
         //Gives the player a hint
         function hinter(Grid){
             if(!Grid.hintUsed){
+                Grid.hintUsed = true;
                 var cellCoord = Math.trunc(Math.random()*81);
                 while(Grid.inputs[cellCoord].disabled==true){
                     cellCoord = Math.trunc(Math.random()*81);
