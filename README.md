@@ -1,3 +1,6 @@
 ## Source for my Sudoku Lynx website
 
-More here: http://sudoku.ispad.cz/
+Play at: 
+https://nikolageorgiev2000.github.io/SudokuLynx/
+or
+http://sudoku.ispad.cz/
