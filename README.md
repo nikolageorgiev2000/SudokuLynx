@@ -1,4 +1,4 @@
-## Source for my Sudoku Lynx website
+## Sudoku Lynx website frontend
 
 Play at: 
 https://nikolageorgiev2000.github.io/SudokuLynx/
